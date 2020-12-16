@@ -22,18 +22,16 @@ aside, nav, footer, header, section {
 
 html, body {
     height: 100%;
-    min-width: $minwidth;
+    min-width: 320px;
 }
 
 body {
     line-height: 1; 
-    font-size: 14px; 
-    font-family: $fontfamily;
     text-size-adjust: 100%;
 }
 
 input, button, textarea {
-    font-family: $fontfamily;
+    font-family: inherit;
 }
 
 input {
