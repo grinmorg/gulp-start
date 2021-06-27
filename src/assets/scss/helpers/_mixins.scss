@@ -19,3 +19,8 @@
         @content;
     }
 }
+
+// адаптивный текст
+@mixin font($mobSize) {
+    font-size: calc(#{$mobSize} + 16 * ((100vw - 320px) / (1280 - 320)));
+}
