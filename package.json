@@ -1,8 +1,8 @@
 {
-    "name": "gulpstart",
+    "name": "grinmorg",
     "version": "1.0.0",
-    "description": "Gulp start",
-    "author": "GrinMorg",
+    "description": "grinmorg",
+    "author": "grinmorg",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
@@ -34,5 +34,8 @@
         "last 1 version",
         "> 1%",
         "IE 10"
-    ]
+    ],
+    "dependencies": {
+        "gulp-svg-sprite": "^1.5.0"
+    }
 }

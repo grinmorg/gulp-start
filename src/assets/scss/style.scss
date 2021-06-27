@@ -1,0 +1,67 @@
+@import "helpers/helpers";
+@import "helpers/vars";
+@import "helpers/mixins";
+@import "helpers/importants";
+@import "helpers/libs";
+@import "vendor/reset";
+html {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+    font-family: var(--f_openSans);
+    font-size: 1.8rem;
+    font-weight: 400;
+    background-color: var(--white);
+
+    &.body--overflow {
+        overflow: hidden;
+    }
+}
+
+.container {
+    max-width: $maxw;
+    min-width: $minw;
+    padding: 0 15px;
+    margin: 0 auto;
+    @include desktop {
+        width: 100%;
+        padding: 0 10px;
+    }
+}
+
+a {
+    color: var(--black);
+
+    transition: 0.2s;
+    &:hover {
+        color: var(--green);
+    }
+}
+
+.title {
+    font-size: 3.6rem;
+    color: var(--black);
+    text-align: center;
+    @include tablets {
+        font-size: 3rem;
+    }
+}
+
+/* Partials */
+@import "./partials/header";
+@import "./partials/footer";
+/* /Partials */
+
+
+/* Blocks */
+// @import "./blocks/hero";
+/* /Blocks */
+
+/* Components */
+@import "./components/btn";
+@import "./components/logo";
+@import "./components/modal";
+@import "./components/input";
+/* /Components */

@@ -1,0 +1,97 @@
+.input {
+    width: 100%;
+    background: var(--gray-input);
+    border: 1px solid var(--gray-input-border);
+    color: var(--white);
+    padding-left: 20px;
+
+    &::placeholder {
+        color: var(--white);
+    }
+    &:focus {
+        border: 1px solid var(--green);
+    }
+    &-select {
+        &:not(:first-child) + .select2-container {
+            margin-top: 20px;
+        }
+        & + .select2-container {
+            .select2-selection {
+                border: 1px solid var(--gray-input-border);
+                background: var(--gray-input);
+                border-radius: 0;
+                height: 45px;
+                display: flex;
+                align-items: center;
+
+                &__rendered {
+                    font-size: 1.6rem;
+                    font-weight: 300;
+                    color: var(--white) !important;
+                }
+                &__arrow {
+                    height: 45px !important;
+                }
+            }
+        }
+    }
+
+    &-form {
+        padding: 15px 20px;
+        font-size: 1.6rem;
+        font-weight: 300;
+        color: var(--white);
+        background: none;
+        border: 1px solid var(--white);
+        &::placeholder {
+            color: var(--white);
+        }
+
+        &:focus {
+            border-color: var(--green);
+        }
+
+        &--green {
+            color: var(--black);
+            border: 1px solid var(--green);
+
+            &:focus {
+                box-shadow: 0 0 6px var(--black);
+            }
+
+            &::placeholder {
+                color: #898989;
+            }
+        }
+    }
+
+    &-check {
+        display: inline-block;
+        *display: inline; /* inline-block ie7 fix */
+        *zoom: 1;
+        vertical-align: top;
+        position: relative;
+        cursor: pointer;
+        & input {
+            width: 0px;
+            height: 0px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            opacity: 0;
+        }
+
+
+        &__text {
+            position: relative;
+            z-index: 2;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+        }
+    }
+}
+
+input {
+    font-family: var(--f_openSans);
+}

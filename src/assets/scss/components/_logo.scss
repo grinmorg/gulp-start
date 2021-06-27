@@ -1,0 +1,29 @@
+.logo {
+    display: flex;
+    align-items: flex-start;
+    max-width: 300px;
+    &__block {
+        margin-left: 15px;
+        margin-top: 4px;
+        @include desktop {
+            display: none;
+        }
+        @include tablets {
+            display: block;
+        }
+    }
+    &__text {
+        display: block;
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 2.6rem;
+    }
+    &__text-green {
+        display: block;
+        margin-top: 5px;
+        color: var(--green-text);
+        font-size: 1.4rem;
+        font-weight: 700;
+    }
+}
