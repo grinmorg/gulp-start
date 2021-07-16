@@ -7,6 +7,7 @@ $(function () {
 
   });
 
+  // Закрывать меню по клику вне меню
   $(document).click( function(e){
     if ( $(e.target).closest('.nav').length || $(e.target).closest('.burder-menu').length) {
         // клик внутри элемента 
@@ -17,7 +18,7 @@ $(function () {
     $('.nav').removeClass("nav--active");
 });
 
-  // tabs
+  // Табы
   $(".tabs-wrapper").each(function () {
     let ths = $(this);
     ths.find(".tab-item").not(":first").hide();
@@ -36,7 +37,7 @@ $(function () {
       .addClass("active");
   });
 
-  // show/hidden password
+  // Скрыть / показать пароль в инпуте 
   $(".input--password__icon").click(function () {
     $(this).toggleClass("active");
     if ($(this).hasClass("active")) {
@@ -54,7 +55,7 @@ $(function () {
     }
   });
 
-  //masks
+  // Стандартные маски
   $(".js-input-email").on("input", function () {
     let testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
 
@@ -69,8 +70,7 @@ $(function () {
     e.target.value = e.target.value.replace(/[^\d]/g, "");
   });
 
-  // accordion
-
+  // Аккордион
   $(".accordion-item-title").click(function () {
     var $item = $(this).parents(".accordion-item");
 
@@ -80,7 +80,7 @@ $(function () {
 
 
 
-  // SLIDERS
+  // Слайдеры
   $(".js-our-works-slider").owlCarousel({
     loop: true,
     margin: 0,
@@ -104,10 +104,10 @@ $(function () {
     },
   });
 
-  // /SLIDERS
+  // /Слайдеры
 
 
-  // show more product info
+  // "Показать еще"
   $(".js-product-info-showmore").on("click", function () {
     if ($(this).hasClass("active")) {
       $(".product-info__row--visible")
@@ -122,9 +122,7 @@ $(function () {
     }
   });
 
-
-
-  // FIXME: <Dev scripts/ delete in production>
+  // FIXME: <Удалить в prod build>
 
   // fake modal open
   // if ($('#modal-auth')){
@@ -133,5 +131,5 @@ $(function () {
   // 	});
   // }
 
-  // FIXME: </Dev scripts/ delete in production>
+  // FIXME: </Удалить в prod build>
 });
