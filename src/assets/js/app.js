@@ -1,4 +1,7 @@
 $(function () {
+  // copyright date
+  $('.js-copyright-date').text(new Date().getFullYear());
+
   // menu
   $(".burder-menu").click(function () {
     $(this).toggleClass("burger--active");
