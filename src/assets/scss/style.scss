@@ -1,8 +1,5 @@
-@import "helpers/helpers";
-@import "helpers/vars";
-@import "helpers/mixins";
-@import "helpers/importants";
-@import "helpers/libs";
+@import "helpers/all";
+
 @import "vendor/reset";
 html {
     font-size: 62.5%;
@@ -60,8 +57,5 @@ a {
 /* /Blocks */
 
 /* Components */
-@import "./components/btn";
-@import "./components/logo";
-@import "./components/modal";
-@import "./components/input";
+@import "./components/all";
 /* /Components */
