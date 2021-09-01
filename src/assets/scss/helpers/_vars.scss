@@ -1,11 +1,12 @@
-$maxw: 1170px;
+$maxw: 1320px;
 $minw: 320px;
 
 :root {
-    --white: #fff;
-    --black: #000;
+    --white: #ffffff;
+    --black: #000000;
+    --green: #0FE772;
 
     --gd_gray: linear-gradient(180deg, rgba(240,246,242,1) 70%, rgba(231,241,250,1) 100%);
 
-    --f_openSans: 'Open Sans', sans-serif;
+    --ff_raleway: 'Raleway', sans-serif;
 }
