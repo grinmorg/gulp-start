@@ -11,11 +11,9 @@ const cssnano = require("gulp-cssnano");
 const uglify = require("gulp-uglify");
 const plumber = require("gulp-plumber");
 const panini = require("panini");
-const imagemin = require("gulp-imagemin");
-const imageminJpegRecompress = require("imagemin-jpeg-recompress");
-const imageminPngquant = require("imagemin-pngquant");
 const del = require("del");
 const notify = require("gulp-notify");
+const tinypng = require("gulp-tinypng-compress");
 const webpack = require("webpack");
 const webpackStream = require("webpack-stream");
 const browserSync = require("browser-sync").create();
@@ -235,16 +233,11 @@ function images(cb) {
   return src(path.src.images)
     .pipe(
       cache(
-        imagemin([
-          imagemin.gifsicle({ interlaced: true }),
-          imageminJpegRecompress({
-            progressive: true,
-            max: 80,
-            min: 70,
-          }),
-          imageminPngquant({ quality: [0.7, 0.8] }),
-          imagemin.svgo({ plugins: [{ removeViewBox: true }] }),
-        ])
+        tinypng({
+          key: "TFPj7dHw1z9jsC6XN3fls1gfRw6Tfk2Q",
+          sigFile: "images/.tinypng-sigs",
+          log: true,
+        })
       )
     )
     .pipe(dest(path.build.images))
