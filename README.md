@@ -16,4 +16,6 @@
 2) Открыть консоль в корневой папке
 3) npm install --global gulp-cli
 4) npm i
-5) gulp
+5) copy .env.example .env
+6) получить API ключ от TinyPng (используется для сжатия изображений)
+7) gulp
